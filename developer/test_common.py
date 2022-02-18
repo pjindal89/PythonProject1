@@ -1,3 +1,4 @@
+import sys
 import unittest
 
 import pytest
@@ -19,6 +20,7 @@ class TestCommons(unittest.TestCase):
         driver = wd.initializewebdriver()
         # print("Starting execution of test now")
         self.log.debug("inside test1")
+        sys.stdout.flush()
         ss=Commons(driver)
 
         ss.screenShot()
