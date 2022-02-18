@@ -17,5 +17,5 @@ def customLogger(logLevel=logging.DEBUG):
                     datefmt='%m/%d/%Y %I:%M:%S %p')
     fileHandler.setFormatter(formatter)
     logger.addHandler(fileHandler)
-    sys.stdout.flush()
+
     return logger

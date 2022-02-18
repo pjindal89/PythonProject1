@@ -4,7 +4,7 @@ import sys
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager, IEDriverManager
-
+import sys
 
 class ActionBase():
     def __init__(self, browser):
@@ -12,6 +12,7 @@ class ActionBase():
         print("Inside constructor for webdriver")
 
     def initializewebdriver(self):
+        sys.stdout.flush()
         if self.browser.lower() == "chrome":
             # driver = webdriver.Chrome(ChromeDriverManager().install())
             path=os.getcwd()+"/browserDrivers/chromedriver.exe"
