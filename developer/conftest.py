@@ -7,7 +7,7 @@ from action.Commons import Commons
 
 
 @pytest.fixture(scope="class")
-# def onettimeexecution(request):
+def onettimeexecution(request):
     print("inside fixture")
     # subprocess.call("TASKKILL /f /IM CHROME.EXE")
     wd = ActionBase("chrome")
