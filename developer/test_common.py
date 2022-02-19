@@ -1,6 +1,7 @@
 import sys
 import unittest
 
+import allure
 import pytest
 import logging
 
@@ -23,8 +24,9 @@ class TestCommons(unittest.TestCase):
         sys.stdout.flush()
         ss=Commons(driver)
 
-        ss.screenShot()
+        # ss.screenShot()
+        allure.attach(driver.get_screenshot_as_png(),name="commons file",attachment_type=allure.attachment_type.PNG)
 
-
+    @allure.step("Just printing")
     def test_commons(self):
         print("inside test2")

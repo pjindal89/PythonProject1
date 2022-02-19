@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from developer import HTMLTestRunner
@@ -12,7 +13,7 @@ class TestHomePage():
     def objectSetup(self,onettimeexecution):
         self.searchObj = HomePage(self.driver)
 
-
+    @allure.description("searches for product")
     def test_searchProduct(self):
         self.searchObj.searchProduct("iphone")
         self.searchObj.clickSearch()
