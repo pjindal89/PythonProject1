@@ -1,0 +1,1 @@
+[35mDEBUG   [0m TestCommons:test_common.py:23 inside test1
